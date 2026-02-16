@@ -1,7 +1,13 @@
+::selection{
+    background: #000;  
+    color: #fff;       
+}
+
+
 header{
     display: flex;
     justify-content: space-between;
-    min-height: 55 px;
+    min-height: 45 px;
     font-family: "Ek Mukta", sans-serif;
     background-color: #000;
     color: #fff;
@@ -30,8 +36,71 @@ header{
     gap: 30px;
 }
 
+.nav-menu a{
+    color: #fff;
+    text-decoration: none;
+    transition: opacity .01s ease;
+}
+
 body{
+    font-family: "Ek Mukta", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #222829;
+    font-weight: 20;
+    line-height: 1.5;
+    -webkit-font-smoothing: antiliased;
+}
+
+.content{
+    padding: 0 18%;
+    margin-bottom: 100px;
+}
+
+.content h1{
+    display: block;
+    font-size: 48px;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 200;
+    line-height: 1.2;
+    margin: 30px 0 20px;
+}
+
+.content h2{
+    font-size: 30px;
+}
+
+.content p{
+    font-size: 21px;
+    margin: 0 0 30px;
+    padding: 0;
+}
+
+.content a{
+    color: #33509F;
+    text-decoration: underline;
+}
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 3%;     
+    margin: 40px 0;
+}
+
+.gallery img{
+    width: 360px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.bottom{
+    margin-top: 0px;
+    background-color: rgb(230,230,230);
+    padding: 0 18%;
+    
 }
