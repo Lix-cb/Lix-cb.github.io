@@ -14,6 +14,11 @@ header{
     text-transform: uppercase;
     align-items: center;
     padding: 0 15%;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled{
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .logo{
