@@ -1,1 +1,103 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Página fea</title>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <div class="parteUno">
+            <h1 id="Titulote">1. HTML</h1>
+            <h2>Introducción</h2>
+            <h3>¿Qué es HTML?</h3>
+            <p>Herramienta que se utiliza para la estructura de página web, es como el "esqueleto de una página". Define las seccciones y el texto que llevará cada componente.</p>
+            <h3>Explica las tags de head y body</h3>
+            <p>La etiqueta "Head" contiene información que el usuario no ve directamente (bueno, quizás sí ve el título de la pestaña), pero también incluye metadatos y la conexión con el CSS.</p>
+            <p>Mientras que el "body" contiene todo lo que el usuario ve, como textos, imágenes, botones, listas, etc.</p>
+            <h2>Basic Tags</h2>
+            <h3>Explain the section, article, aside, header, footer tag</h3>
+            <p>"section" se utiliza para dividir el contenido en bloques relacionados entre sí, es para seccionar.</p>
+            <p>"article" representa el contenido que podría no estar seccionado directamente.</p>
+            <p>"aside" es utilizado para contenido secundario.</p>
+            <p>"header" es el encabezado o parte superior de una página.</p>
+            <p>"footer" es el pie de página, la parte de hasta abajo de la página web.</p>
+            <h3>Create an unordered list. Create an ordered list.</h3>
+            <ul>
+                <li>Krav Magá</li>
+                <li>Sigo al pendiente</li>
+                <li>SUR</li>
+                <li>De vez en cuando (aparece)</li>
+            </ul>
+            <ol>
+                <li>Afirmación: La premisa principal de un argumento.</li>
+                <li>Razonamiento: La secuencia lógica para que la premisa se sostenga.</li>
+                <li>Ejemplo: Aterrizar la afirmación a comparaciones para entenderla mejor.</li>
+            </ol>
+            <h3>Create a basic table using html.</h3>
+            <table border="5">
+                <tr>
+                    <th>Suplemento</th>
+                    <th>Marca</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td>Creatina</td>
+                    <td>GAT Sport</td>
+                    <td>$499</td>
+                </tr>
+                <tr>
+                    <td>Pre-entreno</td>
+                    <td>Venom Inferno</td>
+                    <td>$370</td>
+                </tr>
+            </table>
+        </div>
+        <div class = "parteDos">
+            <h1>2.CSS</h1>
+            <h2>Introducción</h2>
+            <h3>What is CSS?</h3>
+            <p>Diría que es un lenguaje que se usa para "estilizar" una página web.</p>
+            <h3>What is the purpose of CSS?</h3>
+            <p>No dejar que las páginas web sean solo texto, hacerlas más atractivas visualmente para los usuarios</p>
+            <h3>How do you apply a CSS to an HTML (explain the 3 options)</h3>
+            <ol>
+                <li>Se puede aplicar "inline" que es escribir dentro de la etiqueta HTML --style""--.</li>
+                <li>Interno, que puedes escribir un "style" dentro del head.</li>
+                <li>Final,ente externo, en donde se usa un archivo .css y se enlaza al HTML con "link"</li>>
+            </ol>
+            <h3>What is a selector? What is a CSS rule? </h3>
+            <p>Indica qué elemento quiero modificar. Una reglla CSS es la de: selector + propiedades. En donde se indica qué quiero modificar y posteriormente las propiedades que se ven afectadas.</p>
+            <h3>Play the 32 levels of https://flukeout.github.io/</h3>
+            <img src="src/CssDinnerBeated.JPG">
+            <h2>Basic CSS</h2>
+            <h3>Explain a:</h3>
+            <h3>Tag Selector</h3>
+            <p>Selecciona el nombre  de una etiqueta. Por ejemplo: h3{}</p>
+            <h3>Class Selector</h3>
+            <p>Selecciona elementos de una clase específica, ejemplo: .ParteDos{}</p>
+            <h3>Tag and Class Selector</h3>
+            <p>Selecciona una etiqueta con una clase específica, ejemplo: p.ParteDos{}</p>
+            <h3>Id Selector</h3>
+            <p>Selecciona un elemento único previamente definido con Id:"". Ejemplo: #carnitas{}</p>
+            <h3>What is a class? What is an id? How are they related to CSS?</h3>
+            <p>Una clase es un "molde" que pueden seguir ciertas secciones de una página, compartirán atributos de CSS.</p>
+            <p>Un ID debe ser único. Ambos se utilizan para aplicar estilos específicos con CSS.</p>
+            <h3>Explain the CSS Box Model? Show an example.</h3>
+            <p>Todo en CSS es una caja, un espacio que si no se indica no se visualiza directamente delimitado pero siempre está. Dentro de ella está el contenido.</p>
+            <h3>Explain the media queries</h3>
+            <p>Permiten cambiar el diseño segúin el tamaño de la pantalla. Se utilizan para páginas responsivas</p>
+            <h2>Layout CSS</h2>
+            <h3>Explain display: grid</h3>
+            <p>Grid se utiliza para crear estructuras en filas y columnas. El la propiedad que define un elemento como contenedor de una cuadrícula.</p>
+            <h3>Explain display: flex</h3>
+            <p>Flex se utiliza para alinear elementos. Permite distribuirlos de forma más flexible, por defecto los elementos se alinean horizontalmente.</p>
+            <h3>Play the 24 levels of https://flexboxfroggy.com/</h3>
+            <img src="src/FlexboxBeated.JPG">
+        </div>
+        <div class ="Challenge">
+            <h1>CREATE AN HTML CHALLENGE</h1>
+            <h2>Apply a css framework to your nonatlas clone page. (Screenshot)</h2>
+            <img src="src/Reto.JPG">
+            <p>UTILICÉ BOOTSTRAP PARA HACER EL STICKY-TOP DEL HEADER C:</p>
+        </div>
+    </body>
+</html>
