@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi página con Picnic CSS</title>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">  
+  <style>
+    .flex.demo{
+     margin: .2em 0;
+     background: #2ecc40;
+     text-align: center;
+    }
+    .flex.demo div {
+      border:.1em solid pink;
+    }
+
+  </style>
+</head>
+<body>
+  
+
+  <button id="musico">Ve por mi artista favorito</button>
+  <button class="success" id="companero">Ve por otro artista favorito</button>
+  <div class="flex two four-1200 demo">
+    <div id="bio">1</div>
+    <div id="imagen">2</div>
+    <div id="bio2">3</div>
+    <div id="imagen2">4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+  
+  </div>
+
+    <div class="tabs two">
+        <input id='tab-1' type='radio' name='tabgroupB' checked />
+        <label class="pseudo button toggle" for="tab-1">Pregunta 1</label>
+        <input id='tab-2' type='radio' name='tabgroupB'>
+        <label class="pseudo button toggle" for="tab-2">Pregunta 2</label>
+        <div class="row">
+            <div>
+                <h2>¿Cómo fue tu experiencia el domingo?</h2>
+                <p>Fue extraña. Desperté en casa de mi novia y me di cuenta porque ella me preguntó si sabía que estaba pasando, vi las noticias y en cuanto pude me regresé a casa. No salí más que a conseguir comida cerca de mi casa, fue una noticia impactante, jamás creí que tal persona fuese derrotada. Tenía miedo, porque en lugares que suelo frecuentar vi que habían pasado disturbios, hay cosas que no te impactan tanto hasta que las ves en tu entorno.</p>
+            </div>
+            <div>
+                <h2>¿Qué te gustaría que cambiara?</h2>
+                <p>Toda la narrativa social que haga apología al narcotráfico, en general me gustaría que desapareciera la narcocultura y con ella la aspiración que tienen personas a estar en ese mundo. También daría lo que fuera porque desaparezca de todo tipo de industria.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+  let biografia;
+  let biografia2;
+
+  document.addEventListener("DOMContentLoaded", function() {
+    biografia  = document.getElementById("bio");
+    biografia2 = document.getElementById("bio2");
+
+    document.getElementById("musico").addEventListener("click", obtenerJSON);
+    document.getElementById("companero").addEventListener("click", obtenerJSON2);
+    console.log("DOM listo");
+  });
+
+  async function obtenerJSON() {
+    const respuesta = await fetch('https://www.theaudiodb.com/api/v1/json/123/search.php?s=Caifanes');
+    const datos = await respuesta.json();
+
+    biografia.innerHTML = "";
+    document.getElementById("imagen").innerHTML = "";
+
+    const textoArtista = document.createElement('p');
+    textoArtista.textContent = datos.artists[0].strBiographyES;
+    biografia.appendChild(textoArtista);
+
+    const imagenArtista = document.createElement('img');
+    imagenArtista.src = datos.artists[0].strArtistWideThumb;
+    imagenArtista.style.width = "100%";
+    document.getElementById("imagen").appendChild(imagenArtista);
+  }
+
+  async function obtenerJSON2() {
+    const respuesta = await fetch('https://www.theaudiodb.com/api/v1/json/123/search.php?s=Cuco');
+    const datos = await respuesta.json();
+
+    biografia2.innerHTML = "";
+    document.getElementById("imagen2").innerHTML = "";
+
+    const textoArtista = document.createElement('p');
+    textoArtista.textContent = datos.artists[0].strBiographyEN;
+    biografia2.appendChild(textoArtista); 
+
+    const imagenArtista = document.createElement('img');
+    imagenArtista.src = datos.artists[0].strArtistThumb;
+    imagenArtista.style.width = "100%";
+    document.getElementById("imagen2").appendChild(imagenArtista);
+  }
+
+</script>
+</body>
+</html>
